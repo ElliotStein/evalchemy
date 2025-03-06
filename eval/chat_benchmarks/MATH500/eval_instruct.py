@@ -185,7 +185,7 @@ class MATH500Benchmark(BaseBenchmark):
         self.data_file = data_file
         self.debug = debug
         self.seed = seed
-        self.max_new_tokens = 32768  # set higher to avoid truncation for reasoning models
+        self.max_new_tokens = 2048  # set higher to avoid truncation for reasoning models # Batch size 4 works on A100
 
     def generate_responses(self, model: LM) -> Dict[str, Any]:
         """
