@@ -200,6 +200,9 @@ class MATH500Benchmark(BaseBenchmark):
         """
         examples = self.load_questions()
 
+        if self.debug:
+            examples = examples[:2]
+
         # Prepare instances for model
         all_instances = []
         if isinstance(model, lm_eval.models.huggingface.HFLM):
